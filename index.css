@@ -1,0 +1,196 @@
+
+:root{
+ /* Primary */
+--clr-Light-red: hsl(0, 100%, 67%);
+--clr-Light-dark-red: hsl(0, 100%,96%);
+--clr-Orangey-yellow: hsl(39, 100%, 56%);
+--clr-Orangey-light-yellow: hsl(39, 100%, 96%);
+--clr-Green-teal: hsl(166, 100%, 37%);
+--clr-Green-light-teal: hsl(166, 100%, 96%);
+--clr-Cobalt-blue: hsl(234, 85%, 45%);
+--clr-Cobalt-light-blue: hsl(234, 85%, 96%);
+ 
+ /* Gradients */
+
+     --gradient-1: hsl(252, 100%, 67%), hsl(241, 81%, 54%);
+    --gradient-2: hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0);
+--clr-Light-slate-blue: hsl(252, 100%, 67%);
+--clr-Light-royal-blue: hsl(241, 81%, 54%);
+
+--clr-Violet-blue: hsla(256, 72%, 46%, 1);
+
+--clr-Persian-blue: hsla(241, 72%, 46%, 0);
+
+ /* Neutral */
+--clr-White: hsl(0, 0%, 100%);
+--clr-Pale-blue: hsl(221, 100%, 96%);
+--clr-Light-lavender: hsl(241, 100%, 89%);
+--clr-Dark-gray-blue: hsl(224, 30%, 27%);
+
+/* Font */
+
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Hanken Grotesk', sans-serif;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-Light-lavender);
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Genearl style */
+.flex-group{
+ display: flex;
+ justify-content: space-between;
+}
+.dashboard{
+ display: grid;
+ place-content: center;
+ background-color: var(--clr-White);
+ border-radius: 30px;
+}
+@media (min-width:600px) {
+ .dashboard{
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+ }
+}
+.profile{
+ background:linear-gradient(var(--gradient-1));
+
+ opacity: .9;
+ display: flex;
+ gap: 1.5rem;
+ align-items: center;
+ flex-direction: column;
+ border-bottom-left-radius: 30px;
+ border-bottom-right-radius: 30px;
+padding: 2rem;
+}
+.profile-result{ 
+ color: var(--clr-White);
+ opacity: .8;
+ font-size: 1rem;
+ font-family: 'Hanken Grotesk', sans-serif;
+
+}
+.profile-result-score{
+color: var(--clr-White);
+ font-size: 2rem;
+ font-family: 'Hanken Grotesk', sans-serif;
+ font-weight: 800;
+}
+.profile-scoreboard{
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ height: 100px;
+ width: 100px;
+ background:linear-gradient(var(--gradient-2)) ;
+ 
+}
+.profile-scoreboard  p{
+ color: var(--clr-White);
+ opacity: .5;
+}
+.profile-score__assessment{
+ width: 55%;
+ text-align: center;
+}
+.profile-score-title{
+ color: var(--clr-White);
+font-family: 'Hanken Grotesk', sans-serif;
+font-weight: 500;
+}
+.profile-score-text{
+ color: var(--clr-White);
+ opacity: .8;
+}
+.summary{
+ padding: .5rem;
+ margin: .5rem;
+ display: grid;
+ gap: .8rem;
+ background-color: var(--clr-White);
+}
+.reaction{
+ border-radius: 6px;
+ padding: .8rem;
+ background-color:var(--clr-Light-dark-red);
+ /* opacity: .10; */
+ color: var(--clr-Light-red);
+}
+
+.memory{
+  border-radius: 6px;
+  padding: .8rem;
+ background-color: var(--clr-Orangey-light-yellow);
+ color: var(--clr-Orangey-yellow);
+}
+.verbal{
+  border-radius: 6px;
+ padding: .8rem;
+ background-color: var(--clr-Green-light-teal);
+ color: var(--clr-Green-teal);
+}
+.visual{
+  border-radius: 6px;
+ padding: .8rem;
+ background-color: var(--clr-Cobalt-light-blue);
+color: var(--clr-Cobalt-blue);
+}
+.button{
+ padding: .8rem 1.5rem;
+ background-color: var(--clr-Dark-gray-blue);
+ border: 0;
+ color: var(--clr-White);
+ border-radius: 2rem;
+ cursor: pointer;
+}
+.button:is(:hover,:focus){
+ background: linear-gradient(var(--gradient-1));
+}
