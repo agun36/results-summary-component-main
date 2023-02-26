@@ -58,6 +58,13 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Hanken Grotesk', sans-serif;
   background-color: var(--clr-Light-lavender);
+  display: grid;
+ }
+ @media (min-width:650px) {
+  body{
+  place-items: center;
+
+ }
 }
 /*
   6. Improve media defaults
@@ -88,7 +95,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .dashboard{
   background-color: var(--clr-White);
   max-width: 650px;
-  margin: auto;
+  /* margin: auto; */
   min-height: 100vh;
   display: grid;
   gap: 1rem;
@@ -97,9 +104,9 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (min-width:650px) {
  .dashboard{
  grid-template-columns: 1fr 1fr;
- place-content: center;
-min-height: auto;
-margin: 12rem auto;
+ grid-template-rows: 1fr;
+min-height: 100%;
+
 overflow: hidden;
 border-radius: 30px;
  }
