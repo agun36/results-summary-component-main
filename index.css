@@ -91,11 +91,15 @@ p, h1, h2, h3, h4, h5, h6 {
  display: flex;
  justify-content: space-between;
 }
-
+.ml-1{
+margin-left: .3rem;
+}
+.mr-1{
+ margin-right: .3rem;
+}
 .dashboard{
   background-color: var(--clr-White);
   max-width: 650px;
-  /* margin: auto; */
   min-height: 100vh;
   display: grid;
   gap: 1rem;
@@ -171,26 +175,26 @@ font-weight: 500;
 }
 .reaction{
  border-radius: 6px;
- padding: .8rem;
+ padding: 1rem;
  background-color:var(--clr-Light-dark-red);
  color: var(--clr-Light-red);
 }
-
 .memory{
-  border-radius: 6px;
-  padding: .8rem;
+ border-radius: 6px;
+ padding: 1rem;
  background-color: var(--clr-Orangey-light-yellow);
  color: var(--clr-Orangey-yellow);
 }
+
 .verbal{
   border-radius: 6px;
- padding: .8rem;
+padding: 1rem;
  background-color: var(--clr-Green-light-teal);
  color: var(--clr-Green-teal);
 }
 .visual{
   border-radius: 6px;
- padding: .8rem;
+ padding: 1rem;
  background-color: var(--clr-Cobalt-light-blue);
 color: var(--clr-Cobalt-blue);
 }
